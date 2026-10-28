@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import { CiShop, CiReceipt, CiCircleInfo } from "react-icons/ci";
+
+import ShopContainer from "../ShopContainer/ShopContainer";
 import "./Dashboard.css"
 
 export default function Dashboard({ user })
@@ -44,15 +47,19 @@ export default function Dashboard({ user })
 
             <div className="dashboardNavBar">
                 <div className={currentPage === "dashboard" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <CiShop className="dashboardIcon"/>
                     <p>Mi Tienda</p>
                 </div>
                 <div className={currentPage === "facturas" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <CiReceipt className="dashboardIcon"/>
                     <p>Facturas</p>
                 </div>
                 <div className={currentPage === "about" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <CiCircleInfo className="dashboardIcon"/>
                     <p>Acerca de</p>
                 </div>
             </div>
+            {currentPage === "dashboard" && <ShopContainer tienda={tienda} setTienda={setTienda} />}
             <div className="dashboardSeparator" />
 
         </div>
