@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ricardo Gómez",
+    "email": "ricardo@example.com",
+    "password": "hashed_password_123",
+    "rol": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "María López",
+    "email": "maria@example.com",
+    "password": "hashed_password_456",
+    "rol": "cliente"
+  },
+  {
+    "id": 3,
+    "nombre": "Iván Ayala",
+    "email": "iayalar@example.com",
+    "password": "password123",
+    "rol": "cliente"
+  },
+  {
+    "id": 4,
+    "nombre": "Izyy Idsardi",
+    "email": "izzy@example.com",
+    "password": "password123",
+    "rol": "vendedor"
+  },
+  {
+    "id": 5,
+    "nombre": "Anna",
+    "email": "anna@example.com",
+    "password": "anna",
+    "rol": "vendedor"
+  }
+]

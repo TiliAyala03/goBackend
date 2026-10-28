@@ -1,0 +1,18 @@
+[
+    {
+        "id": 5,
+        "productos":[
+            {
+                "nombre": "Libro Nosferatu",
+                "stock": 10,
+                "precio": 55000
+            },
+            {
+                "nombre": "Libro Ángeles",
+                "stock": 10,
+                "precio": 67000
+            }
+        ]
+    }
+
+]
