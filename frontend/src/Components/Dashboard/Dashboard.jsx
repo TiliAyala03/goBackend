@@ -59,8 +59,9 @@ export default function Dashboard({ user })
                     <p>Acerca de</p>
                 </div>
             </div>
-            {currentPage === "dashboard" && <ShopContainer tienda={tienda} setTienda={setTienda} />}
             <div className="dashboardSeparator" />
+            {currentPage === "dashboard" && <ShopContainer tienda={tienda} setTienda={setTienda} user={user}/>}
+            
 
         </div>
 

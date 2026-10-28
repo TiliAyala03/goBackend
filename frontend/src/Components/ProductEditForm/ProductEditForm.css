@@ -1,0 +1,58 @@
+.productEditFormBG
+{
+
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.productEditFormContainer
+{
+
+    width: 30%;
+    height: 80%;
+
+    background-color: #1c1a1d;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: rgb(208, 208, 208);
+
+}
+
+.productEditFormCloseDiv
+{
+
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+
+}
+
+.productEditFormCloseIcon
+{
+
+    font-size: 30px;
+    cursor: pointer;
+
+}

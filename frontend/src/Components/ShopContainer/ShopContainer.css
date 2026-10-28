@@ -11,3 +11,93 @@
     color: rgb(230, 230, 230);
 
 }
+
+.shopContainerViewer
+{
+
+    width: 40%;
+    height: 65%;
+    background-color: rgb(28, 26, 29);
+
+    margin-top: 2%;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.shopContainerIcon1
+{
+
+    font-size: 30px;
+
+}
+
+.shopContainerInner
+{
+
+    width: 90%;
+    height: 55%;
+
+    background-color: #bab8bd0f;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    color: rgb(230, 230, 230);
+
+    border-radius: 10px;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent; 
+
+}
+
+    /* Chrome, Edge, Safari */
+.shopContainerInner::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.shopContainerInner::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.shopContainerInner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shopContainerAddButton
+{
+
+    width: 15%;
+    height: 10%;
+
+    background-color: #439f77;
+    margin-top: 10px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    font-weight: bold;
+
+}
+
+.shopContainerAddButton:hover 
+{
+  background-color: #60d9a5;
+}
