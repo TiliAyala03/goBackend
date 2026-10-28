@@ -1,18 +1,31 @@
 [
-    {
-        "id": 5,
-        "productos":[
-            {
-                "nombre": "Libro Nosferatu",
-                "stock": 10,
-                "precio": 55000
-            },
-            {
-                "nombre": "Libro Ángeles",
-                "stock": 10,
-                "precio": 67000
-            }
-        ]
-    }
-
+  {
+    "id": 5,
+    "productos": [
+      {
+        "nombre": "Libro Nosferatu",
+        "stock": 10,
+        "precio": 55000
+      },
+      {
+        "nombre": "Libro Ángeles",
+        "stock": 10,
+        "precio": 67000
+      },
+      {
+        "nombre": "Anillo de Arquero",
+        "stock": 5,
+        "precio": 100000
+      },
+      {
+        "nombre": "Anillo Anticaballería",
+        "stock": 1,
+        "precio": 110000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "productos": []
+  }
 ]
