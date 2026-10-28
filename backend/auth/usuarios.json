@@ -30,7 +30,7 @@
   {
     "id": 5,
     "nombre": "Anna",
-    "email": "anna@example.com",
+    "email": "anna",
     "password": "anna",
     "rol": "vendedor"
   }

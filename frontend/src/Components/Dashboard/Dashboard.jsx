@@ -5,7 +5,9 @@ import "./Dashboard.css"
 export default function Dashboard({ user })
 {
 
-    const [error, setError] = useState("Hola!")
+    const [error, setError] = useState("")
+    const [tienda, setTienda] = useState(null);
+    const [currentPage, setCurrentPage] = useState("dashboard");
 
     useEffect(() => {
 
@@ -20,7 +22,7 @@ export default function Dashboard({ user })
                 });
                 const data = await res.json();
                 if (!res.ok) return setError(data.error);
-                setError("El servidor respondió, id: " + data.id);
+                setTienda(data);
             }
             catch (err)
             {
@@ -33,11 +35,25 @@ export default function Dashboard({ user })
 
     }, []);
 
+    if (error) return <p>{error}</p>;
+    if (!tienda) return <p>Cargando tu tienda...</p>;
+
     return(
 
         <div className="dashboardMain">
 
-            <p>{ error }</p>
+            <div className="dashboardNavBar">
+                <div className={currentPage === "dashboard" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <p>Mi Tienda</p>
+                </div>
+                <div className={currentPage === "facturas" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <p>Facturas</p>
+                </div>
+                <div className={currentPage === "about" ? "dashboardSelected" : "dashboardUnselected"}>
+                    <p>Acerca de</p>
+                </div>
+            </div>
+            <div className="dashboardSeparator" />
 
         </div>
 
