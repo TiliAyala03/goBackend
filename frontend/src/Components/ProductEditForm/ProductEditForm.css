@@ -56,3 +56,110 @@
     cursor: pointer;
 
 }
+
+.productEditFormInnerContainer
+{
+
+    width: 90%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.productEditForm
+{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+    align-content: center;
+
+}
+
+.productEditFormLittleP
+{
+
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: rgb(150, 150, 150);
+
+}
+
+.editProductFormInputField
+{
+
+    margin-bottom: 15px;
+    margin-top: 1px;
+    height: 10%;
+    width: 60%;
+    
+    color: rgb(236, 236, 236);
+    background-color: rgb(55, 54, 56);
+    border-width: 0;
+    border-radius: 5px;
+
+
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.productEditFormError
+{
+
+    font-size: 12px;
+    font-style: italic;
+    color: #eb4b6e;
+
+}
+
+.editProductFormButton
+{
+
+    width: 40%;
+    height: 12%;
+
+    background-color: #338863;
+    border-radius: 50px;
+    border: 0px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    text-align: center;
+    user-select: none;
+
+    font-weight: bold;
+
+}
+
+.editProductFormButton:hover 
+{
+  background-color: #60d9a5;
+}

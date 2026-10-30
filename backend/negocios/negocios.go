@@ -110,10 +110,54 @@ func dashboardHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func guardarTiendaHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPut {
+		responderError(w, http.StatusMethodNotAllowed, "método no permitido")
+		return
+	}
+
+	var nueva Tienda
+	if err := json.NewDecoder(r.Body).Decode(&nueva); err != nil {
+		responderError(w, http.StatusBadRequest, "JSON inválido")
+		return
+	}
+	if nueva.ID <= 0 {
+		responderError(w, http.StatusBadRequest, "id inválido")
+		return
+	}
+	if nueva.Productos == nil {
+		nueva.Productos = []Producto{}
+	}
+
+	tiendasMu.Lock()
+	defer tiendasMu.Unlock()
+
+	tiendas, err := cargarTiendas()
+	if err != nil {
+		responderError(w, http.StatusInternalServerError, "error leyendo tiendas")
+		return
+	}
+
+	for i := range tiendas {
+		if tiendas[i].ID == nueva.ID {
+			tiendas[i] = nueva
+			if err := guardarTiendas(tiendas); err != nil {
+				responderError(w, http.StatusInternalServerError, "error guardando tienda")
+				return
+			}
+			responderJSON(w, http.StatusOK, nueva)
+			return
+		}
+	}
+
+	responderError(w, http.StatusNotFound, "tienda no encontrada")
+}
+
 func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/dashboard", dashboardHandler)
+	mux.HandleFunc("/tienda", guardarTiendaHandler)
 	http.ListenAndServe(":8081", corsMiddleware(mux))
 
 }

@@ -4,8 +4,8 @@
     "productos": [
       {
         "nombre": "Libro Nosferatu",
-        "stock": 10,
-        "precio": 55000
+        "stock": 37,
+        "precio": 13000
       },
       {
         "nombre": "Libro Ángeles",
@@ -26,6 +26,12 @@
   },
   {
     "id": 4,
-    "productos": []
+    "productos": [
+      {
+        "nombre": "Producto de prueba",
+        "stock": 1,
+        "precio": 1
+      }
+    ]
   }
 ]

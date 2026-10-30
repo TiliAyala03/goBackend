@@ -53,11 +53,12 @@ export default function ShopContainer({ tienda, setTienda, user })
                                 name={currentName}
                                 price={currentPrice}
                                 stock={currentStock}
-                                setIndex={setCurrentIndex}
                                 setName={setCurrentName}
                                 setPrice={setCurrentPrice}
                                 setStock={setCurrentStock}
-                                setFormActive={setFormActive}/>}
+                                setFormActive={setFormActive}
+                                tienda={tienda}
+                                setTienda={setTienda}/>}
         </div>
 
     );

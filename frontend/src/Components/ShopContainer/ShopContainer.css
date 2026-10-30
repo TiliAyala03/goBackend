@@ -77,8 +77,8 @@
 .shopContainerAddButton
 {
 
-    width: 15%;
-    height: 10%;
+    width: 160px;
+    height: 60px;
 
     background-color: #439f77;
     margin-top: 10px;
@@ -92,6 +92,9 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+
+    text-align: center;
+    user-select: none;
 
     font-weight: bold;
 
