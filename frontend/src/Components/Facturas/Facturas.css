@@ -1,0 +1,41 @@
+.facturasMain
+{
+
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: baseline;
+    align-items: baseline;
+    align-content: baseline;
+
+    align-items: center;
+    color: rgb(230, 230, 230);
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent; 
+    padding-top: 20px;
+
+}
+
+.facturasMain
+{
+
+    width: 40%;
+    height: auto;
+
+    background-color: rgb(224, 224, 224);
+
+    color: rgb(26, 26, 26);
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+}

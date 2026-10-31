@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { CiShop, CiReceipt, CiCircleInfo } from "react-icons/ci";
 
 import ShopContainer from "../ShopContainer/ShopContainer";
+import Facturas from "../Facturas/Facturas";
 import "./Dashboard.css"
 
 export default function Dashboard({ user })
@@ -21,7 +22,7 @@ export default function Dashboard({ user })
                 const res = await fetch("http://localhost:8081/dashboard", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ id: user.id })
+                    body: JSON.stringify({ id: user.id, nombre: user.nombre })
                 });
                 const data = await res.json();
                 if (!res.ok) return setError(data.error);
@@ -46,21 +47,18 @@ export default function Dashboard({ user })
         <div className="dashboardMain">
 
             <div className="dashboardNavBar">
-                <div className={currentPage === "dashboard" ? "dashboardSelected" : "dashboardUnselected"}>
+                <div className={currentPage === "dashboard" ? "dashboardSelected" : "dashboardUnselected"} onClick={() =>setCurrentPage("dashboard")}>
                     <CiShop className="dashboardIcon"/>
                     <p>Mi Tienda</p>
                 </div>
-                <div className={currentPage === "facturas" ? "dashboardSelected" : "dashboardUnselected"}>
+                <div className={currentPage === "facturas" ? "dashboardSelected" : "dashboardUnselected"}onClick={() =>setCurrentPage("facturas")}>
                     <CiReceipt className="dashboardIcon"/>
                     <p>Facturas</p>
-                </div>
-                <div className={currentPage === "about" ? "dashboardSelected" : "dashboardUnselected"}>
-                    <CiCircleInfo className="dashboardIcon"/>
-                    <p>Acerca de</p>
                 </div>
             </div>
             <div className="dashboardSeparator" />
             {currentPage === "dashboard" && <ShopContainer tienda={tienda} setTienda={setTienda} user={user}/>}
+            {currentPage === "facturas" && <Facturas userId={user.id} />}
             
 
         </div>

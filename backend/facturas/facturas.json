@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "idVendedor": 5,
+    "nombreVendedor": "anna",
+    "idCliente": 6,
+    "nombreCliente": "tili",
+    "fecha": "30/10/2026",
+    "productos": [
+      {
+        "nombre": "Libro Nosferatu",
+        "cantidad": 1,
+        "precioUnidad": 13000
+      },
+      {
+        "nombre": "Libro Ángeles",
+        "cantidad": 2,
+        "precioUnidad": 67000
+      },
+      {
+        "nombre": "Anillo de Arquero",
+        "cantidad": 1,
+        "precioUnidad": 100000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "idVendedor": 5,
+    "nombreVendedor": "anna",
+    "idCliente": 6,
+    "nombreCliente": "tili",
+    "fecha": "30/10/2026",
+    "productos": [
+      {
+        "nombre": "Libro Nosferatu",
+        "cantidad": 12,
+        "precioUnidad": 13000
+      },
+      {
+        "nombre": "Libro Ángeles",
+        "cantidad": 4,
+        "precioUnidad": 67000
+      }
+    ]
+  }
+]

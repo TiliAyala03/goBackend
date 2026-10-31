@@ -1,0 +1,96 @@
+.purchaseFormBG
+{
+
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.purchaseFormContainer
+{
+
+    width: 70%;
+    height: 80%;
+
+    background-color: #1c1a1d;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: rgb(208, 208, 208);
+
+}
+
+.purchaseFormItemsContainer
+{
+
+    width: 90%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent; 
+
+}
+
+.purchaseFormItemsContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.purchaseFormItemsContainer::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.purchaseFormError
+{
+    font-size: 12px;
+    font-style: italic;
+    color: #c05151;
+}
+
+.purchaseFormButton
+{
+
+    width: 20%;
+    height: 10%;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    border-radius: 50px;
+    border: 0;
+
+    color: white;
+    font-weight: bold;
+
+    background-color: rgb(57, 102, 71);
+
+    transition: background-color 0.3s ease;
+
+}
+
+.purchaseFormButton:hover 
+{
+  background-color: rgb(87, 155, 109);
+}

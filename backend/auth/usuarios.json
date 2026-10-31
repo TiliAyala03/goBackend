@@ -33,5 +33,12 @@
     "email": "anna",
     "password": "anna",
     "rol": "vendedor"
+  },
+  {
+    "id": 6,
+    "nombre": "tili",
+    "email": "tili",
+    "password": "tili",
+    "rol": "cliente"
   }
 ]

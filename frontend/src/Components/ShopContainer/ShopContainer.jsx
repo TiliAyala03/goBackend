@@ -40,6 +40,7 @@ export default function ShopContainer({ tienda, setTienda, user })
                             product={producto.nombre}
                             stock={producto.stock}
                             price={producto.precio}
+                            canBeEdited={true}
                             clickHandler={() => addNew(index, producto.nombre, producto.precio, producto.stock)}
                         />
                     ))}

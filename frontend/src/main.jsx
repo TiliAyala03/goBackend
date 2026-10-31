@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Login from './Components/Login/Login'
 import SignUp from './Components/SignUp/SignUp'
 import Dashboard from './Components/Dashboard/Dashboard'
+import Home from './Components/Home/Home'
 
 import './index.css'
 
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       {currentPage === "DASHBOARD" && user?.rol === "vendedor" && <Dashboard user={user}/>}
+      {currentPage === "HOME" && user?.rol === "cliente" && <Home user={user}/>}
       {currentPage === "LOGIN" && <Login setCurrentPage={setCurrentPage} onLogin={handleLogin}/>}
       {currentPage === "SIGNUP" && <SignUp setCurrentPage={setCurrentPage}/>}
     </>
